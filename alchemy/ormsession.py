@@ -40,7 +40,7 @@ pk = User(id=1, name="Praveen", fullname="Praveen Singh", addresses=([Address(id
 with Session(engine) as session:
     session.add(pk)
     session.commit()
-    session.flush()
+    
     
 with engine.connect() as conn:
     rs = conn.execute(text("select * from user_account"))
